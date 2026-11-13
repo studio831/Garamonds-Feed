@@ -1,8 +1,14 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Feed Garamonds</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap">
 <style>
+[hidden]{display:none!important}
 /* Layout: profilo Instagram al centro (max 935px), griglia 3 colonne 3:4, scheda post in sovrapposizione */
 :root{
   --bg:#fbfaf8; --surface:#ffffff; --fg:#1d1c1a; --muted:#7a766f; --line:#e7e3dd;
@@ -97,6 +103,9 @@ dd{margin:0;min-width:0}
 @media (prefers-reduced-motion:reduce){.tile img,.tile .hover{transition:none}}
 </style>
 
+<style>body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
 <div class="wrap">
   <header class="profile">
     <div class="avatar" aria-hidden="true">G</div>
@@ -203,3 +212,6 @@ document.addEventListener("keydown",e=>{ if(!cur) return; if(e.key==="Escape") c
 document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{ filter=b.dataset.f; document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b))); render(); }));
 stats(); render();
 </script>
+
+</body>
+</html>
